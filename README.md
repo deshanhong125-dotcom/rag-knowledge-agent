@@ -155,45 +155,7 @@ data/
 
 单元测试不会调用远程大模型；真实模型和知识库联调需要单独手动验证。
 
-## 安全发布到 GitHub
 
-这个本地仓库的旧提交曾跟踪 `data/chat_history.json`。即使最新提交删除了该文件，直接推送完整历史仍会把旧版本带到 GitHub。推荐发布一个不包含旧历史的干净快照。
-
-首先在当前仓库确认并提交准备发布的版本：
-
-```powershell
-git status
-git add -A
-git diff --cached --stat
-git commit -m "chore: prepare public release"
-```
-
-将当前提交导出到一个新的目录：
-
-```powershell
-git archive --format=zip --output=..\RAG_project-public.zip HEAD
-Expand-Archive -LiteralPath ..\RAG_project-public.zip -DestinationPath ..\RAG_project-public
-
-cd ..\RAG_project-public
-git init -b main
-git add -A
-git commit -m "Initial public release"
-```
-
-在 GitHub 网页创建一个空仓库，不要勾选自动添加 README、`.gitignore` 或 License。然后执行：
-
-```powershell
-git remote add origin https://github.com/<你的用户名>/<仓库名>.git
-git push -u origin main
-```
-
-如果安装并登录了 GitHub CLI，也可以在干净快照目录执行：
-
-```powershell
-gh repo create <仓库名> --public --source . --remote origin --push
-```
-
-首次推送后，在 GitHub 的 Actions 页面确认 CI 通过。
 
 ## 项目结构
 
