@@ -1,7 +1,7 @@
 dashscope==1.26.2
 docx2txt>=0.8,<1.0
 faiss-cpu==1.14.3
-fastapi==0.139.0
+fastapi==0.139.2
 langchain-community==0.4.2
 langchain-core==1.4.8
 langchain-text-splitters==1.1.2
