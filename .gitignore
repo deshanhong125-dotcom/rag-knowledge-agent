@@ -1,0 +1,54 @@
+# 真实环境变量和密钥
+.env
+.env.*
+!.env.example
+.evn
+
+# Python 虚拟环境
+.venv/
+venv/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 测试和工具缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.tox/
+
+# IDE 配置
+.idea/
+.vscode/
+
+# 运行日志
+*.log
+logs/
+*.tmp
+
+# 操作系统产生的文件
+.DS_Store
+Thumbs.db
+
+# 上传的原始文档
+data/uploads/*
+!data/uploads/.gitkeep
+
+# FAISS 向量索引
+data/faiss_db/*
+!data/faiss_db/.gitkeep
+
+# 运行时产生的数据
+data/chat_history.json
+data/file_registry.json
+data/backups/
+data/trash/
+
+# Python 构建产物
+build/
+dist/
+*.egg-info/

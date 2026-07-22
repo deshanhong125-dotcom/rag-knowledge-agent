@@ -1,0 +1,50 @@
+# Git
+.git/
+.gitignore
+
+# 真实密钥
+.env
+.env.*
+.evn
+
+# Python 虚拟环境
+.venv/
+venv/
+
+# Python 缓存
+__pycache__/
+*.py[cod]
+
+# 测试和工具缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# IDE 配置
+.idea/
+.vscode/
+
+# 本地运行数据
+data/uploads/*
+data/faiss_db/*
+data/chat_history.json
+data/file_registry.json
+data/backups/
+data/trash/
+
+# 日志
+*.log
+logs/
+
+# 非运行必需文件
+README.md
+CONTRIBUTING.md
+SECURITY.md
+LICENSE
+tests/
+
+# 系统文件
+.DS_Store
+Thumbs.db
