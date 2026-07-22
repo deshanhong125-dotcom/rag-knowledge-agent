@@ -1,4 +1,4 @@
-dashscope==1.26.2
+dashscope==1.26.4
 docx2txt>=0.8,<1.0
 faiss-cpu==1.14.3
 fastapi==0.139.0
